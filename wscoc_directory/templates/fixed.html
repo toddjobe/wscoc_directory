@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fixed</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<h1>Fixed Emails</h1>
+{% for extra in extras %}
+    <label name={{ extra.label_id }} for={{ extra.textarea_id }}>Extra Group {{ extra.id|safe }} emails</label>
+    <textarea name={{ extra.textarea_id }} readonly> {{ extra.text|safe }} </textarea>
+{% endfor %}
+
+<label name="label_group_intersect_1" for="id_group_intersect_1">Fixed Group 1 emails</label>
+<textarea name=id_group_intersect_1 readonly></textarea>
+<label name="label_group_intersect_2" for="id_group_intersect_2">Fixed Group 2 emails</label>
+<textarea name=id_group_intersect_2 readonly></textarea>
+<label name="label_group_intersect_3" for="id_group_intersect_3">Fixed Group 3 emails</label>
+<textarea name=id_group_intersect_3 readonly></textarea>
+<label name="label_group_intersect_4" for="id_group_intersect_4">Fixed Group 4 emails</label>
+<textarea name=id_group_intersect_4 readonly></textarea>
+<label name="label_group_intersect_5" for="id_group_intersect_5">Fixed Group 5 emails</label>
+<textarea name=id_group_intersect_5 readonly></textarea>
+
+<label name="label_unassigned" for="id_unassigned">Unassigned email list</label>
+<textarea name="id_unassigned" readonly>{{ unassigned.text }}</textarea>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Walnut Street Church of Christ Email List Checker</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+
+<h1>Walnut Street Church of Christ Email List Checker</h1>
+<form action="/fix" method="post">
+    <div>{{ form.master_list.label}}: {{ form.master_list() }}</div>
+    <div>{{ form.contacts_list.label}}: {{ form.contacts_list() }}</div>
+    {% for group_list in form.group_list  %}
+        <div>{{ group_list.label}}: {{ group_list() }}</div>
+    {% endfor %}
+
+    <!--
+    <label name="label_master" for="id_master">Master email list</label>
+    <textarea name="id_master">Enter master email list.</textarea>
+    <label name="label_contacts" for="id_contacts">Contact email list</label>
+    <textarea name="id_contacts">Enter contacts email list.</textarea>
+    -->
+<!--
+<label name="label_group_intersect_1" for="id_group_intersect_1">Fixed Group 1 emails</label>
+<textarea name=id_group_intersect_1 readonly></textarea>
+<label name="label_group_intersect_2" for="id_group_intersect_2">Fixed Group 2 emails</label>
+<textarea name=id_group_intersect_2 readonly></textarea>
+<label name="label_group_intersect_3" for="id_group_intersect_3">Fixed Group 3 emails</label>
+<textarea name=id_group_intersect_3 readonly></textarea>
+<label name="label_group_intersect_4" for="id_group_intersect_4">Fixed Group 4 emails</label>
+<textarea name=id_group_intersect_4 readonly></textarea>
+<label name="label_group_intersect_5" for="id_group_intersect_5">Fixed Group 5 emails</label>
+<textarea name=id_group_intersect_5 readonly></textarea>
+
+<label name="label_unassigned" for="id_unassigned">Unassigned email list</label>
+<textarea name="id_unassigned" readonly></textarea>
+-->
+<button type="submit" name="id_submit">Submit</button>
+</form>
+</body>
+
+</html>

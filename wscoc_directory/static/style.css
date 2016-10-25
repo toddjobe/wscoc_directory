@@ -1,0 +1,8 @@
+textarea {
+    width: 32ch;
+    height: 6em;
+    display: block;
+}
+label {
+    display: block;
+}
